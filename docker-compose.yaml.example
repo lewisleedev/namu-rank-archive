@@ -1,0 +1,10 @@
+services:
+  namurank:
+    image: namu-rank-archive:latest
+    container_name: namurank
+    environment:
+      LOG_LEVEL: DEBUG
+      NAMU_RANK_DB: /data/2024.db
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
